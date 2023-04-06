@@ -1,9 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
+import useAuth from '../hooks/useAuth';
 
 const LoginScreen = () => {
+    const { user } = useAuth()
     const navigation = useNavigation();
+
+    console.log(user);
     return ( 
         <View>
             <View style={{height: 40}}/>
@@ -13,6 +17,23 @@ const LoginScreen = () => {
         </View>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default LoginScreen
 

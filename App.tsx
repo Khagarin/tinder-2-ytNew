@@ -2,11 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import StackNavigator from './StackNavigator';
 import { NavigationContainer } from "@react-navigation/native";
+import { AuthProvider } from './hooks/useAuth';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      {/* HOC - Higher Order Component */}
+      <AuthProvider>
+        {/* Passes down the cool auth stuff to children */}
+        <StackNavigator />
+      </AuthProvider>
     </NavigationContainer>
   );
 }
@@ -25,6 +30,7 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
 });
+
 */
 
 /*

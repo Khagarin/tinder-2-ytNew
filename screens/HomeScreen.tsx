@@ -7,7 +7,7 @@ const HomeScreen = () => {
     return ( 
         <View>
             <View style={{height: 40}}/>
-            <Text style = {homeStyles.HeaderText}>This is the HomeScreen!</Text>
+            <Text style = {homeStyles.HeaderText}>HomeScreen!</Text>
             <View style={{height: 80}}/>
             <Button title = "Go to chat screen" onPress={() => navigation.navigate("Chat")}/>
         </View>

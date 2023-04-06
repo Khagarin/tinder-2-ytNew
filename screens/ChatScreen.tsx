@@ -6,7 +6,7 @@ const ChatScreen = () => {
     return ( 
         <View>
             <View style={{height: 40}}/>
-            <Text style = {chatStyles.HeaderText}>This is the ChatScreen!</Text>
+            <Text style = {chatStyles.HeaderText}>ChatScreen!</Text>
         </View>
     )
 }
