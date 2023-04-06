@@ -1,12 +1,15 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { View, Text, StyleSheet, Button } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
+    const navigation = useNavigation();
     return ( 
         <View>
             <View style={{height: 40}}/>
             <Text style = {homeStyles.HeaderText}>This is the HomeScreen!</Text>
+            <View style={{height: 80}}/>
+            <Button title = "Go to chat screen" onPress={() => navigation.navigate("Chat")}/>
         </View>
     )
 }
